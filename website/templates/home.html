@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -285,7 +286,7 @@
       </div>
     </div>
   </section>
-
+  
   <section class="section contact" data-section="section5">
     <div class="container">
       <div class="row">
@@ -295,7 +296,8 @@
           </div>
         </div>
         <div class="col-md-6">        
-          <form id="contact" action="" method="post">
+          <form id="contact" action="{% url 'home' %}" method="post">
+            {% csrf_token %}
             <div class="row">
               <div class="col-md-6">
                   <fieldset>
