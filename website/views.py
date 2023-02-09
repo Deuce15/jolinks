@@ -20,7 +20,7 @@ def home(request):
 		New message: {}
 		From: {}
 		'''.format(data['message'], data['email'])
-		send_mail(data['email'], message, '', ['jolinkssolutions@gmail.com'])
+		send_mail(data['email'], message, '', ['i.nyamu5@gmail.com'])
 		
 		# send an email
 		'''

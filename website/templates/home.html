@@ -10,14 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <title>Jolinks</title>
     <link href="{% static 'website/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Additional CSS Files -->
     <!-- <link rel="stylesheet" href="assets/css/fontawesome.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" integrity="sha512-XJ3ntWHl40opEiE+6dGhfK9NAKOCELrpjiBRQKtu6uJf9Pli8XY+Hikp7rlFzY4ElLSFtzjx9GGgHql7PLSeog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'website/assets/css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'website//assets/images/logojs.PNG' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'website/assets/images/jslogo.PNG' %}" type="image/x-icon">
   </head>
 <body>
-   
+
   <!--HEADER-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
@@ -26,7 +28,7 @@
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="#section1">Home</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
         <li class="has-submenu"><a href="#section2">About Us</a></li>
         <li><a href="#section3">Services</a></li>
         <li><a href="#section4">Plans</a></li>
@@ -43,9 +45,9 @@
 
       <div class="video-overlay header-text">
           <div class="caption">
-              <h6>Now in Nanyuki Town</h6>
-              <h2><em>Jolinks</em> solutions</h2>
-              <p>Fastest Internet | Unlimited Plans | 10 MBPS @2,000 KES/Month</p>
+              <h2><em>Jolinks</em> solutions</h2><br/>
+              <h6>Are Offering Home & Business Internet</h6><br/>
+              <p>More Bandwidth | Better Pricing | Constant Support | Fast Installation</p>
               <div class="main-button">
                   <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
               </div>
@@ -65,13 +67,13 @@
                 </h4>
               </div>
               <div class="content-hide">
-                <p>To deliver our users uninterrupted, affordable and high quality broadband internet service at unmatched speeds.</p> 
-                <p class="hidden-sm">To deliver our users uninterrupted, affordable and high quality broadband internet service at unmatched speeds.</p>
+                <p>Our Mission is to achieve the reputation of a quality, high standard & reliable solution & service Provider Company in the ICT industry.</p>
+                <p class="hidden-sm">Our Mission is to achieve the reputation of a quality, high standard & reliable solution & service Provider Company in the ICT industry.</p>
             </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-12"> 
+        <div class="col-lg-4 col-12">
           <div class="features-post second-features">
             <div class="features-content">
               <div class="content-show">
@@ -79,8 +81,8 @@
                 </h4>
               </div>
               <div class="content-hide">
-                <p>To be the first to introduce newer technologies and higher speeds in the broadband internet sector.</p>
-                <p class="hidden-sm">To be the first to introduce newer technologies and higher speeds in the broadband internet sector.</p>
+                <p>Our Vision is to achieve 100% customer satisfaction by delivering quality products and services at an affordable cost. Our forward vision is to strive to become an entity in technology based corporate solutions, capable of demanding unconditional response from the targeted niche. We also believe that for our scope of improvisation – sky is the limit and we are always ready to take our achievements to the next level. We are growing and would always like to remain on the growing streak</p>
+                <p class="hidden-sm">Our Vision is to achieve 100% customer satisfaction by delivering quality products and services at an affordable cost. Our forward vision is to strive to become an entity in technology based corporate solutions, capable of demanding unconditional response from the targeted niche. We also believe that for our scope of improvisation – sky is the limit and we are always ready to take our achievements to the next level. We are growing and would always like to remain on the growing streak</p>
               </div>
             </div>
           </div>
@@ -93,15 +95,15 @@
                 </h4>
               </div>
               <div class="content-hide">
-                  <p>To be in demand as a first preference broadband service provider in area of expansion</p>   
-                  <p class="hidden-sm">To be in demand as a first preference broadband service provider in area of expansion</p>
+                  <p>Desire for Excellence, Trust and confidence build-up, Innovation, Transparency, Teamwork</p>
+                  <p class="hidden-sm">Desire for Excellence, Trust and confidence build-up, Innovation, Transparency, Teamwork</p>
             </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <section class="section why-us" data-section="section2">
     <div class="container">
@@ -112,12 +114,13 @@
               <article id='tabs-1'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="{% static 'website/assets/images/company.jpg' %}" alt="">
+                    <img src="{% static 'website/assets/images/jolinks services mast.jpg' %}" alt="">
                   </div>
                   <div class="col-md-6">
                     <h4>About Us</h4>
-                    <p>Jolinks aiming to provide internet service at lowest cost in Nanyuki area. Established in 2015, Jolinks Internet Services is a leading provider of secure wired and wireless Internet services. </p>
-                    <p>Our goal is to provide you Internet services with professionally-installed systems, monitored and maintained by our expertly-trained staff, and to ensure maximum uptime. Further, our intention is to provide equipment, service and support that will exceed expectation of our client and their guest, creating an excellent impression for our customer as well as our company. </p> 
+                    <p>JOLINKS SOLUTIONS provides one stop automated solution for your trade and industry. Depending on the size and field of your organization, we have different products and services to meet your requirements. We provide the optimum and customized solutions made for your organization.</p>
+                    <p>JOLINKS SOLUTIONS began its business operation as a hardware and network solutions providing company in August 2014. JOLINKS SOLUTIONS is focusing exclusively in high quality and cost-effective network development and implementation of services. We are advancing on a tremendous pace and with involvement of skilled and experienced people working in the organization. JOLINKS SOLUTIONS is currently doing business in Government, Banking, MNCs, Large Corporate, Telecom and in the MediaSector.</p>
+                    <p>Our goal is to provide you Internet services with professionally-installed systems, monitored and maintained by our expertly-trained staff, and to ensure maximum uptime. Further, our intention is to provide equipment, service and support that will exceed expectation of our client and their guest, creating an excellent impression for our customer as well as our company. </p>
                   </div>
                 </div>
               </article>
@@ -175,49 +178,47 @@
         </div>
         <div class="course_container">
           <div class="item">
-            <img src="{% static 'website/assets/images/courses-01.jpg' %}" alt="Course #1">
+            <img src="{% static 'website/assets/images/jolinks services networking3.jpg' %}" alt="Course #1">
             <div class="down-content">
-              <h4>broadband</h4>
-              <p>Many computer networks use a simple line code to transmit one type of signal using a medium's full bandwidth using its baseband.</p>
+              <h4>INTERNET CONNECTIONS</h4>
+              <p>We offer uninterrupted, affordable and high quality broadband internet service at unmatched speeds.</p>
             </div>
           </div>
           <div class="item">
-            <img src="{% static 'website/assets/images/courses-02.jpg' %}" alt="">
+            <img src="{% static 'website/assets/images/jolinks services cctv.jpg' %}" alt="">
             <div class="down-content">
-              <h4>NETWORK SOLUTIONS</h4>
-                <p>At Networking Solutions we know you have a choice of computer service and solutions providers to choose from and we know that you.</p>     
+              <h4>CCTV INSTALLATION</h4>
+                <p>We are experts in CCTV Installations and Maintenance. We install for both home and businesses.</p>
             </div>
           </div>
           <div class="item">
             <img src="{% static 'website/assets/images/courses-03.jpg' %}" alt="">
             <div class="down-content">
-              <h4>INTERNET LEASE LINE
-              </h4>
-              <p>Enterprises use Leased Lines to interconnect their important nodal centres such as primary data centre, back up site..</p>
+              <h4>COMPUTER SERVICES</h4>
+              <p>We offer professional computer services, computer repair and maintenance services in Nanyuki</p>
             </div>
           </div>
           <div class="item">
-            <img src="{% static 'website/assets/images/courses-04.jpg' %}" alt="">
+            <img src="{% static 'website/assets/images/jolinks services2.jpg' %}" alt="">
             <div class="down-content">
-              <h4>Gaming</h4>
-              <p>Gaming the system, manipulating a system's rules to achieve a desired outcome with high connection speed.
-              </p>
+              <h4>GRAPHIC DESIGN</h4>
+              <p>We design business cards, flyers, brochures, company profiles and many more. Work with our professional graphic designers to get a design you will love</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <section class="section plan" data-section="section4">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Our plans</h2>
+            <h2>Our Internet plans</h2>
           </div>
         </div>
-        <div class="col-md-12">        
+        <div class="col-md-12">
           <div class="row">
             <div class="plans-list">
               <div class="col-md-4 col-sm-12 col-md-offset-1 col-sm-offset-1">
@@ -286,7 +287,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="section contact" data-section="section5">
     <div class="container">
       <div class="row">
@@ -295,7 +296,7 @@
             <h2>Let’s Keep In Touch</h2>
           </div>
         </div>
-        <div class="col-md-6">        
+        <div class="col-md-6">
           <form id="contact" action="{% url 'home' %}" method="post">
             {% csrf_token %}
             <div class="row">
@@ -324,12 +325,12 @@
         </div>
         <div class="col-md-6">
           <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63837.09208974297!2d37.04040453824481!3d0.01032114807214365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1787f645b31e6c19%3A0x4df54c49d367f643!2sNanyuki!5e0!3m2!1sen!2ske!4v1671141565897!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498.72727104224515!2d37.078151186014864!3d0.01581576767034705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1787f64a3cecd057%3A0x374c3ae5e54bdd65!2sLaipha%20House%2C%20Nanyuki-Rumuruti%20Rd%2C%20Nanyuki!5e0!3m2!1sen!2ske!4v1674825142501!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <section class="footer-section">
     <div class="container">
       <div class="row">
@@ -342,16 +343,16 @@
               <div class="row">
                   <div class="col-md-6">
                       <ul class="footer-nav">
-                          <li><a href="#section1"><small>Home</small></a></li>
-                          <li><a href="#section2"><small>About</small></a></li>                                        
-                          <li><a href="#section5"><small>Contact</small></a></li>
+                          <li class="scroll-to-section"><a href="#section1"><small>Home</small></a></li>
+                          <li class="scroll-to-section"><a href="#section2"><small>About</small></a></li>
+                          <li class="scroll-to-section"><a href="#section5"><small>Contact</small></a></li>
                       </ul>
                   </div>
                   <div class="col-md-6">
                     <ul class="footer-nav">
-                      <li><a href="#section4"><small>Plans</small></a></li>
-                      <li><a href="#"><small>Registrations</small></a></li>
-                    </ul> 
+                      <li class="scroll-to-section"><a href="#section4"><small>Plans</small></a></li>
+                      <li class="scroll-to-section"><a href="#section3"><small>Services</small></a></li>
+                    </ul>
                   </div>
               </div>
           </div>
@@ -359,7 +360,7 @@
             <h4>Contact info</h4>
             <ul class="contacts-list">
                 <li>
-                    <p style="color:white"><i class="icon icon-House"></i>Lumumba Road Bidhaa Bora Bld, Nanyuki, Vallée du Rift, Kenya, 10400</p>
+                    <p style="color:white"><i class="icon icon-House"></i>Laipha House Nanyuki-Rumuruti Rd, Nanyuki</p>
                 </li>
                 <li>
                     <p style="color:white"><i class="icon icon-Phone2"></i>+254 0728 025205 </p>
@@ -372,7 +373,7 @@
           <div class="col-md-3 col-sm-3">
             <h4>newsletter</h4>
             <p style="color:white">
-                Subscribe to our newsletter for latest updates 
+                Subscribe to our newsletter for latest updates
                 about our creative agency
             </p>
             <div class="form-group has-feedback">
@@ -390,7 +391,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i>2022 Jolinks Solutions : All Rights Reserved</p>
+          <p><i class="fa fa-copyright"></i>2023 Jolinks Solutions : All Rights Reserved</p>
         </div>
       </div>
     </div>
@@ -465,12 +466,12 @@
           checkSection();
         });
 
-        
+
         $(document).ready(function() {
           $('body').addClass('js');
           var $menu = $('#menu'),
             $menulink = $('.menu-link');
-          
+
         $menulink.click(function() {
           $menulink.toggleClass('active');
           $menu.toggleClass('active');
